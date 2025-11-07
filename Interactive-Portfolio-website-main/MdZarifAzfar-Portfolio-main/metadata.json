@@ -1,0 +1,8 @@
+{
+  "name": "MdZarifAzfar-Portfolio",
+  "description": "A dynamic portfolio showcasing skills beyond a static resume. Features an interactive \"AI Playground\" with custom-built tools demonstrating advanced AI integration and modern front-end development skills.",
+  "requestFramePermissions": [
+    "microphone",
+    "geolocation"
+  ]
+}
