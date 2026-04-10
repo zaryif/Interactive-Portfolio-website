@@ -135,7 +135,11 @@ const LiveConvo: React.FC = () => {
   const startConversation = async () => {
     if (isListening) return;
 
-    // Check limits before starting a resource-intensive session.
+    if (!(window as any).aistudio || !(await (window as any).aistudio.hasSelectedApiKey())) {
+      setStatus("Please select an API key first using the Video Generator tab!");
+      return;
+    }
+
     try {
         checkRateLimit();
     } catch (e: any) {
@@ -152,7 +156,7 @@ const LiveConvo: React.FC = () => {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       mediaStreamRef.current = stream;
 
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      const ai = new GoogleGenAI({ apiKey: 'GUEST_PROVIDED_API_KEY' });
       
       // Setup Web Audio API contexts for input (mic) and output (speaker).
       inputAudioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)({ sampleRate: 16000 });

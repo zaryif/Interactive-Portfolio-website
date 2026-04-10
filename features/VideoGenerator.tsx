@@ -82,9 +82,9 @@ const VideoGenerator: React.FC = () => {
                     clearInterval(pollIntervalRef.current!);
                     pollIntervalRef.current = null;
                     const downloadLink = updatedOperation.response?.generatedVideos?.[0]?.video?.uri;
-                    if (downloadLink && process.env.API_KEY) {
-                        // Fetch the video data from the returned URI (requires API key).
-                        const videoResponse = await fetch(`${downloadLink}&key=${process.env.API_KEY}`);
+                    if (downloadLink) {
+                        // window.aistudio intercepts native fetches and attaches the correct Guest auth headers.
+                        const videoResponse = await fetch(downloadLink);
                         const blob = await videoResponse.blob();
                         setVideoUrl(URL.createObjectURL(blob)); // Create a local URL for the video player.
                     } else {
