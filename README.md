@@ -12,6 +12,19 @@ An interactive, AI-powered portfolio template crafted with React, TypeScript, Ta
 
 ---
 
+## 📁 Project Structure
+
+Here's a brief overview of the project's directory structure to help you navigate:
+
+- `portfolio-data.json`: The single source of truth for all your personal data (resume, projects, timeline).
+- `types.ts`: TypeScript interfaces ensuring data consistency across the app.
+- `/components`: Reusable UI building blocks (e.g., Headers, Modals, specific resume sections).
+- `/features`: Larger, self-contained views representing primary tabs and interactive AI tools (e.g., Resume, AI Playgrounds, Contact).
+- `/services`: Abstractions for external API communications, like `geminiService.ts` for Google AI Studio.
+- `App.tsx` & `index.tsx`: Main React application entry points containing layout and routing.
+- `.github/workflows/`: Contains the CI/CD pipeline for GitHub Pages automated deployment.
+
+---
 ## 🛠️ Getting Started 
 
 Want to use this portfolio for yourself? Follow these simple steps!
