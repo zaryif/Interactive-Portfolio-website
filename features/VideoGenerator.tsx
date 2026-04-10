@@ -30,8 +30,8 @@ const VideoGenerator: React.FC = () => {
 
     // Checks if the user has selected an API key using the aistudio helper.
     const checkApiKey = useCallback(async () => {
-        if (window.aistudio) {
-            const hasKey = await window.aistudio.hasSelectedApiKey();
+        if ((window as any).aistudio) {
+            const hasKey = await (window as any).aistudio.hasSelectedApiKey();
             setApiKeySelected(hasKey);
             return hasKey;
         }
@@ -50,8 +50,8 @@ const VideoGenerator: React.FC = () => {
 
     // Opens the aistudio dialog for the user to select their API key.
     const handleSelectKey = async () => {
-        if (window.aistudio) {
-            await window.aistudio.openSelectKey();
+        if ((window as any).aistudio) {
+            await (window as any).aistudio.openSelectKey();
             // Assume success immediately to improve UX and avoid race conditions.
             setApiKeySelected(true);
         }

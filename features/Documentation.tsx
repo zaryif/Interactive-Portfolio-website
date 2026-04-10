@@ -48,9 +48,7 @@ const Documentation: React.FC = () => {
           <p>
             The live version of this portfolio is hosted at <a href="https://www.mdzarifazfar.me" target="_blank" rel="noopener noreferrer"><strong>www.mdzarifazfar.me</strong></a>, utilizing a free domain service to demonstrate accessibility and cost-effective deployment strategies.
           </p>
-          <p>
-            Backend and project management, including API key configuration and service monitoring, were handled through industry-standard platforms like the <strong>Google Cloud Console</strong>. This ensures a robust and scalable infrastructure to support the AI features.
-          </p>
+
       </Section>
 
       <Section title="API Key Management" icon={KeyRound}>
