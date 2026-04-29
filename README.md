@@ -2,7 +2,7 @@
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fzaryif%2FInteractive-Portfolio-website)
 
-**Live Demo:** [https://www.mdzarifazfar.me](https://www.mdzarifazfar.me)
+**Live Demo:** [https://www.mdzarifazfar.me](https://www.mdzarifazfar.me) https://interactive-portfolio-website-pi.vercel.app/
 
 An interactive, AI-powered portfolio template crafted with React, TypeScript, Tailwind CSS, and the Google Gemini API. This portfolio transcends a static resume, offering a dynamic "AI Playground" where guests can interact with specialized AI tools to see your capabilities firsthand.
 
